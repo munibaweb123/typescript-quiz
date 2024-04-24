@@ -172,13 +172,191 @@ if (quiz.typescript === "Basic") {
         const q10 = await inquirer.prompt([{
                 name: "tenthQuestion",
                 type: "list",
-                message: "What will be the output of the following:\nconsole.log(x)\nx=5 ",
+                message: "What will be the output of the following:\nconsole.log(x)\nlet x=5 ",
                 choices: ["A- 5",
                     "B- undefined",
                     "C- error",
                     "D- none of the above"]
             }]);
         if (q10.tenthQuestion === "B- undefined") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+    }
+    console.log(chalk.yellowBright(`In ${quiz.typescript} level you have ${correctanswer} correct answers! out of 10.`));
+}
+if (quiz.typescript === "intermediate") {
+    let correctanswer = 0;
+    let questions = 1;
+    while (questions <= 10) {
+        const q1 = await inquirer.prompt([{
+                name: "firstQuestion",
+                type: "list",
+                message: "which of the following examples makes a functional parameter optional in Typescript:",
+                choices: ["A- ?name: string",
+                    "B- name: optional",
+                    "C- name?: string",
+                    "D- optional name: string"]
+            }]);
+        if (q1.firstQuestion === "C- name?: string") {
+            console.log(`Correct Answer!`);
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q2 = await inquirer.prompt([{
+                name: "secondQuestion",
+                type: "list",
+                message: "TypeScript supported only numeric enums?",
+                choices: ["true", "false"]
+            }]);
+        if (q2.secondQuestion === "false") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q3 = await inquirer.prompt([{
+                name: "thirdQuestion",
+                type: "list",
+                message: "What is the output of the following code:\n enum COLORS {RED = 2, GREEN = 4, BLUE = 6};\nconsole.log(COLORS.RED); ",
+                choices: ["A- 2",
+                    "B- 6",
+                    "C- 0",
+                    "D- 1"]
+            }]);
+        if (q3.thirdQuestion === "A- 2") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q4 = await inquirer.prompt([{
+                name: "forthQuestion",
+                type: "list",
+                message: "enum type in TypeScript allows to:",
+                choices: ["A- Add additional behavior to existing code.",
+                    "B- define a set of named constants",
+                    "C- create a method or class that works on variety of types rather than a single one",
+                    "D- none of the above"]
+            }]);
+        if (q4.forthQuestion === "B- define a set of named constants") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q5 = await inquirer.prompt([{
+                name: "fifthQuestion",
+                type: "list",
+                message: "What is the output of the following code?\nlet a=2;\n a+=5; console.log(a);",
+                choices: ["A- 5",
+                    "B- 2",
+                    "C- 7",
+                    "D- 14"]
+            }]);
+        if (q5.fifthQuestion === "C- 7") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q6 = await inquirer.prompt([{
+                name: "sixthQuestion",
+                type: "list",
+                message: "What is the output of the following:\nlet food=\"pizza\"; \nif(food!=\"cake\")\n{ console.log(food) \n}\nelse {\nconsole.log(\"cake\")\n}",
+                choices: ["A- cake", "B- pizza", "C- food", "D- none of the above"]
+            }]);
+        if (q6.sixthQuestion === "B- pizza") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q7 = await inquirer.prompt([{
+                name: "seventhQuestion",
+                type: "list",
+                message: "What is the output of the following:\nfor(let i=0;i<=5;i++)\n{\nconsole.log(i);\n}",
+                choices: ["A- 0 1 2 3 4 5",
+                    "B- i",
+                    "C- 1 2 3 4 5",
+                    "D- none of the above"]
+            }]);
+        if (q7.seventhQuestion === "A- 0 1 2 3 4 5") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q8 = await inquirer.prompt([{
+                name: "eighthQuestion",
+                type: "list",
+                message: "npm stands for",
+                choices: ["A- node package mobile",
+                    "B- node package manager",
+                    "C- not package manager",
+                    "D- none of the above"]
+            }]);
+        if (q8.eighthQuestion === "B- node package manager") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q9 = await inquirer.prompt([{
+                name: "ninthQuestion",
+                type: "list",
+                message: "Inquirer is used to: ",
+                choices: ["A- change the color of output",
+                    "B- take input from a user at runtime on cli",
+                    "C- run code on browser",
+                    "D- none of the above"]
+            }]);
+        if (q9.ninthQuestion === "B- take input from a user at runtime on cli") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q10 = await inquirer.prompt([{
+                name: "tenthQuestion",
+                type: "list",
+                message: "There are two types of variable scope:\nGlobal and Local",
+                choices: ["true", "false"]
+            }]);
+        if (q10.tenthQuestion === "true") {
             console.log(chalk.green(`Correct Answer!`));
             correctanswer++;
             questions++;
