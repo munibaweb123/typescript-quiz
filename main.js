@@ -1,5 +1,6 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
+console.log(chalk.bold(`----------Welcome to typescript Quiz!----------`));
 const quiz = await inquirer.prompt([{
         name: "typescript",
         type: "list",
@@ -357,6 +358,178 @@ if (quiz.typescript === "intermediate") {
                 choices: ["true", "false"]
             }]);
         if (q10.tenthQuestion === "true") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+    }
+    console.log(chalk.yellowBright(`In ${quiz.typescript} level you have ${correctanswer} correct answers! out of 10.`));
+}
+if (quiz.typescript === "advance") {
+    let correctanswer = 0;
+    let questions = 1;
+    while (questions <= 10) {
+        const q1 = await inquirer.prompt([{
+                name: "firstQuestion",
+                type: "list",
+                message: "what is the length of the following array?\n let fruits=[\"apple\",\"banana\",\"orange\"]",
+                choices: ["A- 0",
+                    "B- 1",
+                    "C- 2",
+                    "D- 3"]
+            }]);
+        if (q1.firstQuestion === "C- 2") {
+            console.log(`Correct Answer!`);
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q2 = await inquirer.prompt([{
+                name: "secondQuestion",
+                type: "list",
+                message: "what will be the output of the following?\nlet subjects=[\"english\",\"urdu\",\"maths\"]\n subjects.push(\"computer\") \n console.log(subjects)",
+                choices: ["A- english,urdu,maths",
+                    "B- english,urdu,maths,computer",
+                    "C- subjects",
+                    "D- none of the above"]
+            }]);
+        if (q2.secondQuestion === "B- english,urdu,maths,computer") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q3 = await inquirer.prompt([{
+                name: "thirdQuestion",
+                type: "list",
+                message: "What is the output of the following code:\n function factorial(n:number):number {\n if(n===0)\nreturn 1;\n} return n*factorial(n-1);\n let response =factorial(4);\nconsole.log(response); ",
+                choices: ["A- 24",
+                    "B- 720",
+                    "C- 12",
+                    "D- 120"]
+            }]);
+        if (q3.thirdQuestion === "A- 24") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q4 = await inquirer.prompt([{
+                name: "forthQuestion",
+                type: "list",
+                message: "setTimeout() method use to:",
+                choices: ["A- set the time of clock.",
+                    "B- set the delay of time for the specific code",
+                    "C- delays the time for 2 seconds",
+                    "D- none of the above"]
+            }]);
+        if (q4.forthQuestion === "B- set the delay of time for the specific code") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q5 = await inquirer.prompt([{
+                name: "fifthQuestion",
+                type: "list",
+                message: "In TypeScript the object is a collection of key-value pairs,\nwhere each key (also known as a property) is associated with a value.\n",
+                choices: ["true", "false"]
+            }]);
+        if (q5.fifthQuestion === "true") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q6 = await inquirer.prompt([{
+                name: "sixthQuestion",
+                type: "list",
+                message: "What is the output of the following:\n let person={\nname:\"Alice\",\nage:20\n}\n console.log(person.name)",
+                choices: ["A- 20", "B- Alice", "C- {\nname:\"Alice\",\nage:20\n}", "D- none of the above"]
+            }]);
+        if (q6.sixthQuestion === "B- Alice") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q7 = await inquirer.prompt([{
+                name: "seventhQuestion",
+                type: "list",
+                message: "In TypeScript, a type alias allows you to create a new name (alias) for an existing type or a complex type.",
+                choices: ["true", "false"]
+            }]);
+        if (q7.seventhQuestion === "true") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q8 = await inquirer.prompt([{
+                name: "eighthQuestion",
+                type: "list",
+                message: "npx stands for",
+                choices: ["A- node package eXecute",
+                    "B- node package executable",
+                    "C- not package manager",
+                    "D- none of the above"]
+            }]);
+        if (q8.eighthQuestion === "A- node package eXecute") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q9 = await inquirer.prompt([{
+                name: "ninthQuestion",
+                type: "list",
+                message: "let mixedBag:string | number; \n mixedBag=\"sunscreen\"\n mixedBag=30 \n is this possible using union?",
+                choices: ["true", "false"]
+            }]);
+        if (q9.ninthQuestion === "true") {
+            console.log(chalk.green(`Correct Answer!`));
+            correctanswer++;
+            questions++;
+        }
+        else {
+            console.log(chalk.red(`Wrong Answer!`));
+            questions++;
+        }
+        const q10 = await inquirer.prompt([{
+                name: "tenthQuestion",
+                type: "list",
+                message: "which command is correct to install chalk in your program?",
+                choices: ["A- npm i chalk", "B- npm install chalk", "C- both A and B", "D- none of the above"]
+            }]);
+        if (q10.tenthQuestion === "C- both A and B") {
             console.log(chalk.green(`Correct Answer!`));
             correctanswer++;
             questions++;
