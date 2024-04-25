@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 console.log(chalk.bold(`----------Welcome to typescript Quiz!----------`));
@@ -21,7 +22,7 @@ if (quiz.typescript === "Basic") {
                     "D- A testing framework for JavaScript"]
             }]);
         if (q1.firstQuestion === "B- A superset of JavaScript") {
-            console.log(`Correct Answer!`);
+            console.log(chalk.green(`Correct Answer!`));
             correctanswer++;
             questions++;
         }
@@ -205,7 +206,7 @@ if (quiz.typescript === "intermediate") {
                     "D- optional name: string"]
             }]);
         if (q1.firstQuestion === "C- name?: string") {
-            console.log(`Correct Answer!`);
+            console.log(chalk.green(`Correct Answer!`));
             correctanswer++;
             questions++;
         }
@@ -382,8 +383,8 @@ if (quiz.typescript === "advance") {
                     "C- 2",
                     "D- 3"]
             }]);
-        if (q1.firstQuestion === "C- 2") {
-            console.log(`Correct Answer!`);
+        if (q1.firstQuestion === "D- 3") {
+            console.log(chalk.green(`Correct Answer!`));
             correctanswer++;
             questions++;
         }
